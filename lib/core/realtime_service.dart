@@ -17,7 +17,7 @@ class RealtimeTyping {
 class RealtimeService {
   RealtimeClient? _client;
   final Map<String, RealtimeChannel> _channels = {};
-  final Map<String, StreamController<Map<String, dynamic>>> _controllers = {};
+  final Map<String, StreamController<dynamic>> _controllers = {};
 
   /// Connect (or reconnect) with a fresh user JWT.
   void wire(String jwt) {
