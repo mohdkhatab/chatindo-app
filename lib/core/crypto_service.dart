@@ -38,7 +38,7 @@ class CryptoService {
     final secret = await _secret();
     final hkdf = Hkdf(hmac: Hmac.sha256(), outputLength: 32);
     final inputKey = SecretKey(utf8.encode('$secret::$chatId'));
-    final derived = await hkdf.deriveKey(inputKey, nonce: utf8.encode('chatindo/v1'));
+    final derived = await hkdf.deriveKey(secretKey: inputKey, nonce: utf8.encode('chatindo/v1'));
     return derived;
   }
 

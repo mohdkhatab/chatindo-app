@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'core/api_client.dart';
-import 'core/session_controller.dart';
+import 'api_client.dart';
+import 'session_controller.dart';
 
 /// Facade covering every deployed Chatindo edge function.
 class ChatindoApi {

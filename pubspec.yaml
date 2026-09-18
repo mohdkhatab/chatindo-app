@@ -14,7 +14,7 @@ dependencies:
   shared_preferences: ^2.2.3
   google_fonts: ^6.2.1
   cryptography: ^2.7.0
-  realtime_client: ^1.0.2
+  realtime_client: ^2.0.0
   image_picker: ^1.0.5
 
 dev_dependencies:

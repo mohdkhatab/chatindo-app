@@ -165,7 +165,7 @@ class _Hero extends StatelessWidget {
           SizedBox(height: 6),
           Text('Everything in Free, then some.', style: TextStyle(color: Colors.white70, fontSize: 14)),
           SizedBox(height: 18),
-          _Benefit(icon: Icons.infinite_rounded, text: 'Unlimited messages & media'),
+          _Benefit(icon: Icons.all_inclusive, text: 'Unlimited messages & media'),
           _Benefit(icon: Icons.double_arrow_rounded, text: 'Priority delivery & support'),
           _Benefit(icon: Icons.star_outline_rounded, text: 'Exclusive liquid-glass themes'),
         ],
