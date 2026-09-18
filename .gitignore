@@ -1,0 +1,33 @@
+# Flutter / Dart generated files
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+.idea/
+.vscode/
+
+# Pub
+pubspec.lock
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Signing / secrets
+android/key.properties
+ios/Runner/GoogleService-Info.plist
+**/*.jks
+**/*.keystore
+*.p8
+*.mobileprovision
+
+# Certs / CI artifacts
+*.apk
+*.aab
+*.ipa
+*.app.dSYM.zip
+
+# Env overrides (never commit real credentials)
+.env

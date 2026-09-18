@@ -1,0 +1,42 @@
+name: Build iOS
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  ios:
+    name: Release .app (no codesign)
+    runs-on: macos-14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Generate iOS scaffold
+        run: flutter create --platforms=ios --org com.chatindo .
+
+      - name: Remove template widget test
+        run: rm -f test/widget_test.dart
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+
+      - name: Build iOS (no codesign)
+        run: flutter build ios --release --no-codesign
+
+      - name: Upload .app
+        uses: actions/upload-artifact@v4
+        with:
+          name: chatindo-ios
+          path: build/ios/iphoneos/*.app
